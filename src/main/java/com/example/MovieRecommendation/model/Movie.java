@@ -5,6 +5,7 @@ public class Movie {
     private String title;
     private String description;
     private String imageURL;
+    private Genre genre;
 
     public int getId() {
         return id;
@@ -37,4 +38,8 @@ public class Movie {
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
+
+    public Genre getGenre() { return genre; }
+
+    public void setGenre(Genre genre) { this.genre = genre; }
 }
