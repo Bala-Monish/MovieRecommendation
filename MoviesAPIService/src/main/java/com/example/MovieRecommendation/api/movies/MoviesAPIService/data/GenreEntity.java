@@ -1,6 +1,15 @@
-package com.example.MovieRecommendation.api.movies.MoviesAPIService.model;
+package com.example.MovieRecommendation.api.movies.MoviesAPIService.data;
 
-public class Genre {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "genre")
+public class GenreEntity implements Serializable {
+    private static final long serialVersionUID = -785807813274624999L;
+    @Id
     private int genre_id;
     private String genre_name;
 

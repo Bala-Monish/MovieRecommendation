@@ -1,7 +1,5 @@
 package com.example.MovieRecommendation.api.movies.MoviesAPIService.shared;
 
-import com.example.MovieRecommendation.api.movies.MoviesAPIService.model.Genre;
-
 import java.io.Serializable;
 
 public class MovieDTO implements Serializable {
@@ -11,7 +9,7 @@ public class MovieDTO implements Serializable {
     private String cast;
     private String description;
     private String image_link;
-    private Genre genre_id;
+    private GenreDTO genre_id;
 
     public long getMovie_id() {
         return movie_id;
@@ -53,11 +51,11 @@ public class MovieDTO implements Serializable {
         this.image_link = image_link;
     }
 
-    public Genre getGenre_id() {
+    public GenreDTO getGenre_id() {
         return genre_id;
     }
 
-    public void setGenre_id(Genre genre_id) {
+    public void setGenre_id(GenreDTO genre_id) {
         this.genre_id = genre_id;
     }
 }

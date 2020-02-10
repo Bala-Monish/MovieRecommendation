@@ -1,7 +1,5 @@
 package com.example.MovieRecommendation.api.movies.MoviesAPIService.data;
 
-import com.example.MovieRecommendation.api.movies.MoviesAPIService.model.Genre;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -16,7 +14,7 @@ public class MovieEntity implements Serializable {
     private String cast;
     private String description;
     private String image_link;
-    private Genre genre_id;
+    private GenreEntity genre_id;
 
     public long getMovie_id() {
         return movie_id;
@@ -58,11 +56,11 @@ public class MovieEntity implements Serializable {
         this.image_link = image_link;
     }
 
-    public Genre getGenre_id() {
+    public GenreEntity getGenre_id() {
         return genre_id;
     }
 
-    public void setGenre_id(Genre genre_id) {
+    public void setGenre_id(GenreEntity genre_id) {
         this.genre_id = genre_id;
     }
 }

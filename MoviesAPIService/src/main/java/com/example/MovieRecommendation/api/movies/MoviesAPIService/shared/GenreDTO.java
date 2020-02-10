@@ -1,6 +1,9 @@
-package com.example.MovieRecommendation.api.movies.MoviesAPIService.model;
+package com.example.MovieRecommendation.api.movies.MoviesAPIService.shared;
 
-public class Genre {
+import java.io.Serializable;
+
+public class GenreDTO implements Serializable {
+    private static final long serialVersionUID = -8791238360361449640L;
     private int genre_id;
     private String genre_name;
 
