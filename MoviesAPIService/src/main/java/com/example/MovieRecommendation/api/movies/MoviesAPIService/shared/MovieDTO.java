@@ -2,19 +2,22 @@ package com.example.MovieRecommendation.api.movies.MoviesAPIService.shared;
 
 import com.example.MovieRecommendation.api.movies.MoviesAPIService.model.Genre;
 
-public class MovieDTO {
-    int movie_id;
-    String movie_name;
-    String cast;
-    String description;
-    String image_link;
-    Genre genre_id;
+import java.io.Serializable;
 
-    public int getMovie_id() {
+public class MovieDTO implements Serializable {
+    private static final long serialVersionUID = 3541814550771546460L;
+    private long movie_id;
+    private String movie_name;
+    private String cast;
+    private String description;
+    private String image_link;
+    private Genre genre_id;
+
+    public long getMovie_id() {
         return movie_id;
     }
 
-    public void setMovie_id(int movie_id) {
+    public void setMovie_id(long movie_id) {
         this.movie_id = movie_id;
     }
 

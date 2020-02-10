@@ -1,18 +1,18 @@
 package com.example.MovieRecommendation.api.movies.MoviesAPIService.model;
 
 public class Movie {
-    int movie_id;
-    String movie_name;
-    String cast;
-    String description;
-    String image_link;
-    Genre genre_id;
+    private long movie_id;
+    private String movie_name;
+    private String cast;
+    private String description;
+    private String image_link;
+    private Genre genre_id;
 
-    public int getMovie_id() {
+    public long getMovie_id() {
         return movie_id;
     }
 
-    public void setMovie_id(int movie_id) {
+    public void setMovie_id(long movie_id) {
         this.movie_id = movie_id;
     }
 
