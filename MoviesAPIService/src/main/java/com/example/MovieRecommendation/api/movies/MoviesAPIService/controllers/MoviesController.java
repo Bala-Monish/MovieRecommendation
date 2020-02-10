@@ -1,8 +1,7 @@
 package com.example.MovieRecommendation.api.movies.MoviesAPIService.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.MovieRecommendation.api.movies.MoviesAPIService.model.Movie;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/movies")
@@ -12,7 +11,8 @@ public class MoviesController {
         return "working";
     }
 
-    public String createMovie() {
+    @PostMapping
+    public String createMovie(@RequestBody Movie movie) {
         return "";
     }
 }
