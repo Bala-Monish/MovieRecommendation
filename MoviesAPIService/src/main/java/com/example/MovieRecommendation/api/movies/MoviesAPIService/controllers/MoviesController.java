@@ -11,4 +11,8 @@ public class MoviesController {
     public String status() {
         return "working";
     }
+
+    public String createMovie() {
+        return "";
+    }
 }
