@@ -6,7 +6,7 @@ public class Movie {
     private String cast;
     private String description;
     private String image_link;
-    private Genre genre_id;
+    private Genre genre;
 
     public long getMovie_id() {
         return movie_id;
@@ -48,11 +48,11 @@ public class Movie {
         this.image_link = image_link;
     }
 
-    public Genre getGenre_id() {
-        return genre_id;
+    public Genre getGenre() {
+        return genre;
     }
 
-    public void setGenre_id(Genre genre_id) {
-        this.genre_id = genre_id;
+    public void setGenre(Genre genre) {
+        this.genre = genre;
     }
 }
