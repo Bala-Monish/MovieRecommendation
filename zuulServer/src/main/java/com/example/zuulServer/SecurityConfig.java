@@ -1,13 +1,10 @@
 package com.example.ZuulServer;
 
-import javax.servlet.http.HttpServletResponse;
-
 import com.example.ZuulServer.jwt.JWTAuthenticationFilter;
 import com.example.ZuulServer.jwt.JWTAuthorizationFilter;
 import com.example.ZuulServer.services.UserDetailsServiceImpl;
 
 import org.springframework.http.HttpMethod;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
