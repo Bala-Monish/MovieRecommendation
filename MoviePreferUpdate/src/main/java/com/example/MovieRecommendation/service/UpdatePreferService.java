@@ -1,14 +1,13 @@
 package com.example.MovieRecommendation.service;
 
-import com.example.MovieRecommendation.model.UserDetails;
-//import com.example.MovieRecommendation.model.UserPrefer;
+import com.example.MovieRecommendation.model.MovieGenre;
 
 public interface UpdatePreferService {
 
-	UserDetails findUserById(Integer id);
+	MovieGenre[] findById(Integer id);
 	
 //	UserDetails findPerfById(Integer id);
 	
-	void updateById(UserDetails userPref);
+	void updateById(Integer id, MovieGenre[] genres);
 
 }
