@@ -18,9 +18,6 @@ public class UpdatePreferServiceImp implements UpdatePreferService {
 	@Autowired
 	private UserRepository userRep;
 	
-//	@Autowired
-//	private UserPrefRepository userPref;
-	
 	@Override
 	public MovieGenre[] findById(Integer id) {
 		return userRep.findById(id).map(u -> {
