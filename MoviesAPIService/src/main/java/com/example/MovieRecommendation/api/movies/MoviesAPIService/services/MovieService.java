@@ -1,7 +1,8 @@
 package com.example.MovieRecommendation.api.movies.MoviesAPIService.services;
 
-import com.example.MovieRecommendation.api.movies.MoviesAPIService.shared.MovieDTO;
+import com.example.MovieRecommendation.api.movies.MoviesAPIService.model.Movie;
 
 public interface MovieService {
-    MovieDTO createMovie(MovieDTO movie);
+    Movie createMovie(Movie movie);
+    Movie findMovieById(Integer id);
 }
