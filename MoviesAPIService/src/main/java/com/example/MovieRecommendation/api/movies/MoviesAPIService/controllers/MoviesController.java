@@ -2,7 +2,6 @@ package com.example.MovieRecommendation.api.movies.MoviesAPIService.controllers;
 
 import com.example.MovieRecommendation.api.movies.MoviesAPIService.model.Movie;
 import com.example.MovieRecommendation.api.movies.MoviesAPIService.services.MovieService;
-import com.example.MovieRecommendation.api.movies.MoviesAPIService.shared.MovieDTO;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,12 +22,17 @@ public class MoviesController {
         return "working";
     }
 
+    @GetMapping("/{movie_id}")
+    public Movie getById(@PathVariable("movie_id") Integer id) {
+        return movieService.findMovieById(id);
+    }
+
     @PostMapping
     public String createMovie(@RequestBody Movie movie) {
         ModelMapper modelMapper = new ModelMapper();
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-        MovieDTO movieDTO = modelMapper.map(movie, MovieDTO.class);
-        movieService.createMovie(movieDTO);
+        Movie movieDTO = modelMapper.map(movie, Movie.class);
+        movieService.createMovie(movie);
         return "create called";
     }
 }
