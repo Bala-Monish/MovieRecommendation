@@ -12,9 +12,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/movies")
 public class MoviesController {
     @Autowired
-    private Environment env;
-
-    @Autowired
     MovieService movieService;
 
     @GetMapping("/status/check")
