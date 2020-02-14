@@ -1,6 +1,5 @@
 package com.example.MovieRecommendation.api.movies.MoviesAPIService.services;
 
-import com.example.MovieRecommendation.api.movies.MoviesAPIService.data.MovieEntity;
 import com.example.MovieRecommendation.api.movies.MoviesAPIService.data.MovieRepository;
 import com.example.MovieRecommendation.api.movies.MoviesAPIService.shared.MovieDTO;
 import org.modelmapper.ModelMapper;
