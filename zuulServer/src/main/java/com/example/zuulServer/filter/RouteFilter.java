@@ -1,4 +1,4 @@
-package com.example.zuulServer.filter;
+package com.example.ZuulServer.filter;
 
 import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
