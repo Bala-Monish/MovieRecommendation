@@ -1,5 +1,7 @@
 package com.example.ZuulServer;
 
+import com.example.ZuulServer.filter.RouteFilter;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -19,5 +21,9 @@ public class ZuulServerApplication {
 	@Bean
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
+	}
+	@Bean
+	public RouteFilter routeFilter() {
+		return new RouteFilter();
 	}
 }
