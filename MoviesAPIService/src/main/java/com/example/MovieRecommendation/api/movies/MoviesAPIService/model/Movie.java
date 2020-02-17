@@ -56,7 +56,7 @@ public class Movie {
     public void setDescription(String description) {
         this.description = description;
     }
-    
+
     public String getCast() {
         return cast;
     }
