@@ -22,8 +22,4 @@ public class ZuulServerApplication {
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
-	@Bean
-	public RouteFilter routeFilter() {
-		return new RouteFilter();
-	}
 }

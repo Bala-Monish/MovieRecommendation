@@ -11,17 +11,22 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import static java.util.Collections.emptyList;
 
+import com.netflix.discovery.EurekaClient;
+
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
     RestTemplate restTemplate;
 
+    @Autowired
+    private EurekaClient discoveryClient;
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        String url = "http://login/mrs/users";
-        
-        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url).queryParam("username", username);
+        String url = discoveryClient.getNextServerFromEureka("loginservice", false).getHomePageUrl();
+
+        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url).path("login").queryParam("username", username);
 
         com.example.ZuulServer.models.User applicationUser = restTemplate.getForObject(builder.build().toUriString(), com.example.ZuulServer.models.User.class);
 

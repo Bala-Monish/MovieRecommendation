@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout().disable()
                 .formLogin().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and().authorizeRequests().antMatchers(HttpMethod.GET, SIGN_UP_URL).authenticated().and()
+                .and().authorizeRequests().antMatchers(HttpMethod.GET, SIGN_UP_URL).permitAll().anyRequest().authenticated().and()
                     .addFilter(authFilter)
                     .addFilter(new JWTAuthorizationFilter(authenticationManager()));
     }
