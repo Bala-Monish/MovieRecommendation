@@ -1,13 +1,13 @@
-package movie.recommendation.loginUser;
+package com.movierecommendation.recommender;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LoginUserApplication {
+public class RecommenderApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LoginUserApplication.class, args);
+		SpringApplication.run(RecommenderApplication.class, args);
 	}
 
 }

@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.MovieRecommendation.model.MovieGenre;
-import com.example.MovieRecommendation.model.UserDetails;
-//import com.example.MovieRecommendation.model.UserPrefer;
 import com.example.MovieRecommendation.service.UpdatePreferService;
 
 @RestController
