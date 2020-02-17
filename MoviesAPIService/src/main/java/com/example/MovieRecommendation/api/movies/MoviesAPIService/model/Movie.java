@@ -32,8 +32,7 @@ public class Movie {
     @ManyToOne
     @JoinColumn(name = "id_genre")
     private Genre genre;
-
-
+    
     public int getId() {
         return id;
     }
