@@ -33,5 +33,4 @@ public class RecommenderController {
 
         return Arrays.stream(movies).filter(m -> genres.anyMatch(g -> g.getId() == m.getGenre().getId())).limit(3).toArray(Movie[]::new);
     }
-
 }
