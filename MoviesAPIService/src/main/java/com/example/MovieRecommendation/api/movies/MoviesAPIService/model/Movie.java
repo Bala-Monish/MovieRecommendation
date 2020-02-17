@@ -33,7 +33,6 @@ public class Movie {
     @JoinColumn(name = "id_genre")
     private Genre genre;
 
-
     public int getId() {
         return id;
     }
@@ -57,6 +56,7 @@ public class Movie {
     public void setDescription(String description) {
         this.description = description;
     }
+
     public String getCast() {
         return cast;
     }
