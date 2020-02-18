@@ -12,7 +12,7 @@ import movie.recommendation.repository.UserRepository;
 
 
 @RestController
-@RequestMapping("/mrs/users")
+@RequestMapping("/user")
 public class UserController {
 	@Autowired
 	 private UserRepository  userep;
