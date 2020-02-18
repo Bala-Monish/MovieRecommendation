@@ -26,7 +26,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         String url = discoveryClient.getNextServerFromEureka("loginservice", false).getHomePageUrl();
 
-        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url).path("login").queryParam("username", username);
+        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url).pathSegment("user").queryParam("email", username);
 
         com.example.ZuulServer.models.User applicationUser = restTemplate.getForObject(builder.build().toUriString(), com.example.ZuulServer.models.User.class);
 
