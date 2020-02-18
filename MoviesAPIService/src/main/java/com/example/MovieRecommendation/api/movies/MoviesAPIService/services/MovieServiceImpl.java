@@ -21,10 +21,6 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public Movie createMovie(Movie movie) {
-//        ModelMapper modelMapper = new ModelMapper();
-//        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-//        Movie movieEntity = modelMapper.map(movie, Movie.class);
-//        movieRepository.save(movieEntity);
         movieRepository.save(movie);
         return null;
     }
