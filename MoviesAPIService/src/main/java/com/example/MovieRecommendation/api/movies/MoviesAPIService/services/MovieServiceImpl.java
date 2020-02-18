@@ -5,6 +5,9 @@ import com.example.MovieRecommendation.api.movies.MoviesAPIService.model.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -52,5 +55,25 @@ public class MovieServiceImpl implements MovieService {
             thisMovie.setCast(movie.getCast());
             movieRepository.save(thisMovie);
         }
+    }
+
+    @Override
+    public void deleteById(Integer id) {
+        Optional<Movie> m = movieRepository.findById(id);
+        if(m.isPresent()) {
+            movieRepository.deleteById(id);
+        }
+    }
+
+    @Override
+    public List<Movie> findAll() {
+         List<Movie> movies = new ArrayList<Movie>();
+        Iterable<Movie> movieIterable = movieRepository.findAll();
+        Iterator<Movie> movieCursor = movieIterable.iterator();
+        while(movieCursor.hasNext()) {
+            Movie movie = movieCursor.next();
+            movies.add(movie);
+        }
+        return movies;
     }
 }
