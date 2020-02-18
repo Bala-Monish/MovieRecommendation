@@ -18,11 +18,6 @@ public class MoviesController {
         return "working";
     }
 
-//    @GetMapping("/{movie_id}")
-//    public Movie getById(@PathVariable("movie_id") Integer id) {
-//        return movieService.findMovieById(id);
-//    }
-
     @GetMapping(value = "/{movie_id}")
     public Movie getById(@PathVariable("movie_id") Integer id) {
         return movieService.findMovieById(id);
