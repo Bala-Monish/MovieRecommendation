@@ -14,19 +14,6 @@ import movie.recommendation.userProfile.repository.UserRepository;
 @RestController
 @RequestMapping(value = "/user")
 public class UserController {
-	//@Autowired
-	// private UserRepository  userep;
-	
-	 
-	
-	  
-//	@GetMapping("/{id}")
-//	  public User getUserById(@PathVariable("id") String id) {
-//		 String url = discoveryClient.getNextServerFromEureka("MoviePreferences", false).getHomePageUrl();
-//	        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url).pathSegment("user").pathSegment("user_id")
-//	        com.example.userProfile.models.User applicationUser = restTemplate.getForObject(builder.build().toUriString(), MovieGenre[].class);
-//
-//	  }
-	  
+ 
 	  
 }

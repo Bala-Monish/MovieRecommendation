@@ -9,6 +9,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.netflix.discovery.DiscoveryClient;
+import com.netflix.discovery.EurekaClient;
 
 import movie.recommendation.userProfile.model.MovieGenre;
 import movie.recommendation.userProfile.model.UserDetails;
@@ -24,8 +25,10 @@ public class UserProfileService {
 	@Autowired
 	RestTemplate restTemplate;
 	
+//	@Autowired
+	//DiscoveryClient discoveryClient;
 	@Autowired
-	DiscoveryClient discoveryClient;
+	private EurekaClient discoveryClient; 
 	public UserProfileDetails getUserProfileDetails(int id)
 	{
 		UserProfileDetails userProfileDetails = new UserProfileDetails();
