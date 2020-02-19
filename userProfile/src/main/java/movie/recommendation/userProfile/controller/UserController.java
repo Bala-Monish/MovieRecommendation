@@ -22,7 +22,10 @@ public class UserController {
 	  
 	@GetMapping("/{id}")
 	  public User getUserById(@PathVariable("id") String id) {
-	    return userep.findByid(id);
+		 String url = discoveryClient.getNextServerFromEureka("MoviePreferences", false).getHomePageUrl();
+	        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url).pathSegment("user").pathSegment("user_id")
+	        com.example.userProfile.models.User applicationUser = restTemplate.getForObject(builder.build().toUriString(), MovieGenre[].class);
+
 	  }
 	  
 	  

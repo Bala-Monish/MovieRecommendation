@@ -16,6 +16,9 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private String email;
+	@Transient
+	private MovieGenre[];
+	
 	public String getFirstname() {
 		return firstName;
 	}
