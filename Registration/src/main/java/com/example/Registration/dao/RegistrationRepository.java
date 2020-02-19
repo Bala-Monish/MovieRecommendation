@@ -1,7 +1,7 @@
 package com.example.Registration.dao;
 
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.example.Registration.Model.UserRegistrationModel;
@@ -10,7 +10,7 @@ import com.example.Registration.Model.UserRegistrationModel;
 // CRUD refers Create, Read, Update, Delete
 
 @Repository
-public interface RegistrationRepository extends JpaRepository<UserRegistrationModel, String> {
-	 UserRegistrationModel findByid(String id);
+public interface RegistrationRepository extends CrudRepository<UserRegistrationModel, Integer> {
+	 UserRegistrationModel findByid(int id);
 
 }
