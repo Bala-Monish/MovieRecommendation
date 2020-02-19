@@ -13,7 +13,7 @@ public class UserProfileDetails {
 
 	private String email;
 	//array 
-	// private MovieGenre[] movieGenre;
+ private MovieGenre[] movieGenre;
 
 	public String getFirstName() {
 		return firstName;
@@ -44,26 +44,26 @@ public class UserProfileDetails {
 //		return "UserProfileDetails [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
 //				+ ", movieGenre=" + Arrays.toString(movieGenre) + "]";
 //	}
-//
-//	public MovieGenre[] getMovieGenre() {
-//		return movieGenre;
-//	}
-//
-//	public void setMovieGenre(MovieGenre[] movieGenre) {
-//		this.movieGenre = movieGenre;
-//	}
 
-	
-	//gnre name 
-	 private List<String> movieGenre;
-
-	public List<String> getMovieGenre() {
+	public MovieGenre[] getMovieGenre() {
 		return movieGenre;
 	}
 
-	public void setMovieGenre(List<String> movieGenre) {
+	public void setMovieGenre(MovieGenre[] movieGenre) {
 		this.movieGenre = movieGenre;
 	}
+
+	
+	//gnre name 
+//	 private List<String> movieGenre;
+//
+//	public List<String> getMovieGenre() {
+//		return movieGenre;
+//	}
+//
+//	public void setMovieGenre(MovieGenre[] genres) {
+//		this.movieGenre = genres;
+//	}
 
 	@Override
 	public String toString() {
