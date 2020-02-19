@@ -5,14 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-//@Entity
-//@Table(name = "genre")
+@Entity
+@Table(name = "genre")
 public class MovieGenre {
-//	@Id
-//	@Column(name = "genre_id")
+	@Id
+	@Column(name = "genre_id")
     private int id;
 	
-	//@Column(name = "genre_name")
+	@Column(name = "genre_name")
     private String genreName;
 
     public int getId() { return id; }

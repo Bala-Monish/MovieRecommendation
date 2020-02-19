@@ -14,8 +14,8 @@ import movie.recommendation.userProfile.repository.UserRepository;
 @RestController
 @RequestMapping(value = "/user")
 public class UserController {
-	@Autowired
-	 private UserRepository  userep;
+	//@Autowired
+	// private UserRepository  userep;
 	
 	 
 	

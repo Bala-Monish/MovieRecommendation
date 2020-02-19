@@ -7,8 +7,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
-//@SpringBootApplication
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+@SpringBootApplication
+//@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 public class UserProfileApplication {
 
 	

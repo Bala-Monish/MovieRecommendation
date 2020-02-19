@@ -16,7 +16,7 @@ public class UpdateController {
 	@Autowired
 	UserProfileService userProfileService;
 	
-	// private UpdatePreferService updatePreSer;
+	//private UpdatePreferService updatePreSer;
 
 	@GetMapping(value = "/{user_id}")
 	public UserProfileDetails getById(@PathVariable("user_id") int id) {
