@@ -1,6 +1,8 @@
 package com.example.MovieRecommendation.api.movies.MoviesAPIService.controllers;
 
+import com.example.MovieRecommendation.api.movies.MoviesAPIService.model.Genre;
 import com.example.MovieRecommendation.api.movies.MoviesAPIService.model.Movie;
+import com.example.MovieRecommendation.api.movies.MoviesAPIService.services.GenreService;
 import com.example.MovieRecommendation.api.movies.MoviesAPIService.services.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +15,17 @@ public class MoviesController {
     @Autowired
     MovieService movieService;
 
+    @Autowired
+    GenreService genreService;
+
     @GetMapping("/")
     public List<Movie> findAll() {
         return movieService.findAll();
+    }
+
+    @GetMapping("/genres")
+    public List<Genre> findAllGenres() {
+        return genreService.findAll();
     }
 
     @GetMapping("/status/check")

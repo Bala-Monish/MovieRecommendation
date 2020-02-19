@@ -63,7 +63,7 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public List<Movie> findAll() {
-         List<Movie> movies = new ArrayList<Movie>();
+        List<Movie> movies = new ArrayList<Movie>();
         Iterable<Movie> movieIterable = movieRepository.findAll();
         Iterator<Movie> movieCursor = movieIterable.iterator();
         while(movieCursor.hasNext()) {
