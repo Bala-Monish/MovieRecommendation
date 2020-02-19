@@ -28,11 +28,7 @@ public class UserProfileService {
 //	@Autowired
 	//DiscoveryClient discoveryClient;
 	@Autowired
-<<<<<<< HEAD
 	private EurekaClient discoveryClient; 
-=======
-	EurekaClient discoveryClient;
->>>>>>> e4c071b4498055e5169a4d92cd31b8368f28160e
 	public UserProfileDetails getUserProfileDetails(int id)
 	{
 		UserProfileDetails userProfileDetails = new UserProfileDetails();
