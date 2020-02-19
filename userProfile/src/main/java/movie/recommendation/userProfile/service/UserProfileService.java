@@ -25,8 +25,10 @@ public class UserProfileService {
 	@Autowired
 	RestTemplate restTemplate;
 	
+//	@Autowired
+	//DiscoveryClient discoveryClient;
 	@Autowired
-	EurekaClient discoveryClient;
+	private EurekaClient discoveryClient; 
 	public UserProfileDetails getUserProfileDetails(int id)
 	{
 		UserProfileDetails userProfileDetails = new UserProfileDetails();

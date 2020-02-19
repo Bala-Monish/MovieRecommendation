@@ -24,17 +24,4 @@ public class UpdateController {
 
 	}
 
-//	@PutMapping(value = "/{user_id}")
-//	public void updateById(@PathVariable Integer id, @RequestBody MovieGenre[] genres) {
-//		updatePreSer.updateById(id, genres);
-//		
-//		
-//		
-//		@GetMapping("/{id}")
-//		  public User getUserById(@PathVariable("id") String id) {
-//			 String url = discoveryClient.getNextServerFromEureka("MoviePreferences", false).getHomePageUrl();
-//		        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url).pathSegment("user").pathSegment("user_id")
-//		        com.example.userProfile.models.User applicationUser = restTemplate.getForObject(builder.build().toUriString(), MovieGenre[].class);
-//
-//	}
 }
