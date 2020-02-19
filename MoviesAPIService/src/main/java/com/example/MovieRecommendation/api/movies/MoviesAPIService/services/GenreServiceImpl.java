@@ -2,7 +2,6 @@ package com.example.MovieRecommendation.api.movies.MoviesAPIService.services;
 
 import com.example.MovieRecommendation.api.movies.MoviesAPIService.data.GenreRepository;
 import com.example.MovieRecommendation.api.movies.MoviesAPIService.model.Genre;
-import com.example.MovieRecommendation.api.movies.MoviesAPIService.model.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
