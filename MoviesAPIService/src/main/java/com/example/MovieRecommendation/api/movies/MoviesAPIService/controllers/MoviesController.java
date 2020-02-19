@@ -43,4 +43,5 @@ public class MoviesController {
     public void deleteById(@PathVariable Integer movie_id) {
         movieService.deleteById(movie_id);
     }
+
 }
