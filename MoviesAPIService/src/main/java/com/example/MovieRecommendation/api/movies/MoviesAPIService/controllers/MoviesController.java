@@ -15,17 +15,9 @@ public class MoviesController {
     @Autowired
     MovieService movieService;
 
-    @Autowired
-    GenreService genreService;
-
     @GetMapping("/")
     public List<Movie> findAll() {
         return movieService.findAll();
-    }
-
-    @GetMapping("/genres")
-    public List<Genre> findAllGenres() {
-        return genreService.findAll();
     }
 
     @GetMapping("/status/check")
