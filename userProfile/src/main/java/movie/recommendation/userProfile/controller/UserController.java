@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import movie.recommendation.userProfile.model.User;
+//import movie.recommendation.userProfile.model.User;
 import movie.recommendation.userProfile.repository.UserRepository;
 
 
@@ -20,13 +20,13 @@ public class UserController {
 	 
 	
 	  
-	@GetMapping("/{id}")
-	  public User getUserById(@PathVariable("id") String id) {
-		 String url = discoveryClient.getNextServerFromEureka("MoviePreferences", false).getHomePageUrl();
-	        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url).pathSegment("user").pathSegment("user_id")
-	        com.example.userProfile.models.User applicationUser = restTemplate.getForObject(builder.build().toUriString(), MovieGenre[].class);
-
-	  }
+//	@GetMapping("/{id}")
+//	  public User getUserById(@PathVariable("id") String id) {
+//		 String url = discoveryClient.getNextServerFromEureka("MoviePreferences", false).getHomePageUrl();
+//	        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url).pathSegment("user").pathSegment("user_id")
+//	        com.example.userProfile.models.User applicationUser = restTemplate.getForObject(builder.build().toUriString(), MovieGenre[].class);
+//
+//	  }
 	  
 	  
 }

@@ -2,11 +2,11 @@ package movie.recommendation.userProfile.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import movie.recommendation.userProfile.model.User;
+import movie.recommendation.userProfile.model.UserDetails;
 
 
-public interface UserRepository extends JpaRepository<User, String> {
-	  User findByid(String id);
+public interface UserRepository extends JpaRepository<UserDetails, String> {
+	UserDetails findByid(int id);
 	 
 	}
 
