@@ -32,7 +32,7 @@ public class UserRegistrationModel {
 	
 	@Column(name = "email" )
 	@JsonProperty("email")
-	private String emailId;
+	private String email;
 	
 	@Column(name = "password" )
 	private String password;
@@ -75,12 +75,12 @@ public class UserRegistrationModel {
 		this.lastName = lastName;
 	}
 
-	public String getEmailId() {
-		return emailId;
+	public String getemail() {
+		return email;
 	}
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setEmailId(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {

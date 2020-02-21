@@ -12,11 +12,11 @@ public class MovieGenre {
 	
 	
 		@Id
-		@Column(name ="genre_id")
+		@Column(name ="id")
 	    private int id;
 		
-		@Column(name ="genre_name")
-		private String genreName;
+		@Column(name ="name")
+		private String name;
 
 	    public int getId() { return id; }
 
@@ -24,11 +24,11 @@ public class MovieGenre {
 	        this.id = id;
 	    }
 
-		public String getGenreName() {
-			return genreName;
+		public String getname() {
+			return name;
 		}
 
-		public void setGenreName(String genreName) {
-			this.genreName = genreName;
+		public void setGenreName(String name) {
+			this.name = name;
 		}
 }
