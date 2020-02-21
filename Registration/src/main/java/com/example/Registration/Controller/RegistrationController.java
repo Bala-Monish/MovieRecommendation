@@ -1,6 +1,8 @@
 package com.example.Registration.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,14 +13,17 @@ import com.example.Registration.Model.UserRegistrationModel;
 import com.example.Registration.dao.RegistrationRepository;
 
 @RestController
-@RequestMapping(path="/mrs")
 public class RegistrationController {
 
 	@Autowired
 	private RegistrationRepository regrep;
 	
+	@Autowired
+	PasswordEncoder encoder;
+
 	 @PostMapping("/user") 
 	 		public int save (@RequestBody UserRegistrationModel user) {
+			user.setPassword(encoder.encode(user.getPassword()));
 			regrep.save(user);
 			return user.getId();
 	 
