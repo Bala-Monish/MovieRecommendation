@@ -5,6 +5,7 @@ import java.util.List;
 
 public class UserProfileDetails {
 	
+	private int id;
 
 	 private String firstName;
 	 
@@ -15,6 +16,12 @@ public class UserProfileDetails {
 	//array 
  private MovieGenre[] genres;
 
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getFirstName() {
 		return firstName;
 	}

@@ -47,6 +47,7 @@ public class UserProfileService {
 		userProfileDetails.setFirstName(user.getFirstName());
 		userProfileDetails.setLastName(user.getLastName());
 		userProfileDetails.setEmail(user.getEmail());
+		userProfileDetails.setId(user.getId());
 		
 		// STEP 5: Set the genre information for the user obtained from MoviePreference service
 		userProfileDetails.setGenres(genres);

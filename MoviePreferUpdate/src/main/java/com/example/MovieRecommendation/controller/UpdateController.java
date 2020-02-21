@@ -24,7 +24,7 @@ public class UpdateController {
 	}
 	
 	@PutMapping(value = "/{user_id}")
-	public void updateById(@PathVariable Integer id, @RequestBody MovieGenre[] genres) {
+	public void updateById(@PathVariable("user_id") Integer id, @RequestBody MovieGenre[] genres) {
 		updatePreSer.updateById(id, genres);
 	}
 }

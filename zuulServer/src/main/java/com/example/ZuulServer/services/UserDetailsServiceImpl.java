@@ -24,16 +24,22 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        String url = discoveryClient.getNextServerFromEureka("loginservice", false).getHomePageUrl();
-
-        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url).pathSegment("user").queryParam("email", username);
-
-        com.example.ZuulServer.models.User applicationUser = restTemplate.getForObject(builder.build().toUriString(), com.example.ZuulServer.models.User.class);
+       
+        com.example.ZuulServer.models.User applicationUser = getUserFromLoginService(username);
 
         if (applicationUser == null) {
             throw new UsernameNotFoundException(username);
         }
 
         return new User(applicationUser.getEmail(), applicationUser.getPassword(), emptyList());
+    }
+    public com.example.ZuulServer.models.User getUserFromLoginService(String username) {
+        String url = discoveryClient.getNextServerFromEureka("loginservice", false).getHomePageUrl();
+
+        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url).pathSegment("user").queryParam("email", username);
+
+        com.example.ZuulServer.models.User applicationUser = restTemplate.getForObject(builder.build().toUriString(), com.example.ZuulServer.models.User.class);
+        
+        return applicationUser;
     }
 }
